@@ -1,0 +1,11 @@
+:root {
+    --bg-deep: #121614;
+    --bg-surface: #1a201c;
+    --primary: #ffb703;
+    --text-main: #f8f9fa;
+    --text-muted: #a0a5a2;
+    --highlight: rgba(255, 183, 3, 0.2);
+    --radius: 8px;
+    --transition: all 0.25s ease;
+}
+

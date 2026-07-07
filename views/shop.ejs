@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolyTuna Marketplace - Pro Music Gear</title>
+    <link rel="stylesheet" href="/styles/shop.css">
+    <link rel="stylesheet" href="/styles/site.css">
+</head>
+<body>
+
+    <%- include('partials/header') %>
+
+    <main class="shop-container">
+        <aside class="Filters"></aside>
+
+        <section class="products-wrapper">
+            <div class="search-wrapper">
+                <input type="text" id="shop-search" placeholder="Search gear, pedals, instruments...">
+                <a href="/shop/sell" class="btn btn-primary" style="width:auto; white-space:nowrap;">+ Sell Your Gear</a>
+            </div>
+
+            <h2 class="catalog-title">Available Gear</h2>
+            <div class="products"></div>
+        </section>
+
+        <aside class="cart-container-box">
+            <h2>Your Cart</h2>
+            <div class="cart"></div>
+            <div class="cart-footer">
+                <button class="Check-out-btn">Proceed to Checkout</button>
+            </div>
+        </aside>
+    </main>
+
+    <div class="Buy_Panel" id="buyPanel">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        
+        <div class="Product_image">
+            <img id="popupImage" src="" alt="Product Image">
+        </div>
+        
+        <div class="Product_details">
+            <div class="Product_name">
+                <h4 id="popupName">Product Name</h4>
+            </div>
+            <div class="popup-tags" id="popupTags"></div>
+            <p class="popup-description" id="popupDescription"></p>
+            <div class="Product_price"> 
+                <h4 id="popupPrice">$0</h4>
+            </div>
+            <button class="add-to-cart" id="popupAddToCart">
+                <h4>ADD TO CART</h4>
+            </button>
+            <button class="favorite-btn popup-favorite-btn" id="popupFavoriteBtn">&#9825; Favorite</button>
+        </div>
+    </div>
+
+    <script>window.currentUser = <%- user ? JSON.stringify(user.username) : 'null' %>;</script>
+    <script src="/scripts/shop.js"></script>
+
+<%- include('partials/footer') %>
+</body>
+</html>

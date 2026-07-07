@@ -1,0 +1,164 @@
+[
+  {
+    "id": "seed-1",
+    "name": "Guitar Les Paul",
+    "price": 2500,
+    "count": 2,
+    "image": "/styles/images/Les_Paul_Guitar.jpg",
+    "type": [
+      "instrument",
+      "guitar"
+    ],
+    "description": "Iconic Les Paul in great condition, ready to gig.",
+    "seller": "HolyTuna Store",
+    "createdAt": "2026-05-01T00:00:00.000Z"
+  },
+  {
+    "id": "seed-2",
+    "name": "beatles custom guitar pick",
+    "price": 3,
+    "count": 10,
+    "image": "/styles/images/Beatles_Guitar_Picks.webp",
+    "type": [
+      "guitar",
+      "accessories"
+    ],
+    "description": "Collectible Beatles-themed guitar pick set.",
+    "seller": "HolyTuna Store",
+    "createdAt": "2026-05-02T00:00:00.000Z"
+  },
+  {
+    "id": "seed-3",
+    "name": "guitar strap with lighting",
+    "price": 10,
+    "count": 7,
+    "image": "/styles/images/Guitar_Strap_with_Lighting.webp",
+    "type": [
+      "guitar",
+      "accessories"
+    ],
+    "description": "Adjustable strap with built-in LED lighting.",
+    "seller": "HolyTuna Store",
+    "createdAt": "2026-05-03T00:00:00.000Z"
+  },
+  {
+    "id": "seed-4",
+    "name": "guitar wire red 5M",
+    "price": 15,
+    "count": 5,
+    "image": "/styles/images/Guitar_Wire_Red_5M.jfif",
+    "type": [
+      "guitar",
+      "accessories",
+      "wire"
+    ],
+    "description": "High quality 5 meter instrument cable.",
+    "seller": "HolyTuna Store",
+    "createdAt": "2026-05-04T00:00:00.000Z"
+  },
+  {
+    "id": "seed-5",
+    "name": "notepad",
+    "price": 6,
+    "count": 6,
+    "image": "/styles/images/Notebook.jfif",
+    "type": [
+      "accessories"
+    ],
+    "description": "Handy notepad for jotting down lyrics and chord ideas.",
+    "seller": "HolyTuna Store",
+    "createdAt": "2026-05-05T00:00:00.000Z"
+  },
+  {
+    "id": "seed-6",
+    "name": "radiohed",
+    "price": 80,
+    "count": 6,
+    "image": "/styles/images/Radiohead_In_rainbows_CD.webp",
+    "type": [
+      "CD"
+    ],
+    "description": "In Rainbows CD, great condition.",
+    "seller": "HolyTuna Store",
+    "createdAt": "2026-05-06T00:00:00.000Z"
+  },
+  {
+    "id": "seed-7",
+    "name": "nervan",
+    "price": 67,
+    "count": 4,
+    "image": "/styles/images/Nirvana_In_Utero_CD.avif",
+    "type": [
+      "CD"
+    ],
+    "description": "In Utero CD, great condition.",
+    "seller": "HolyTuna Store",
+    "createdAt": "2026-05-07T00:00:00.000Z"
+  },
+  {
+    "id": "seed-8",
+    "name": "perl jem",
+    "price": 87,
+    "count": 1,
+    "image": "/styles/images/Pearl_Jam_Ten_CD.jpg",
+    "type": [
+      "CD"
+    ],
+    "description": "Ten CD, great condition.",
+    "seller": "HolyTuna Store",
+    "createdAt": "2026-05-08T00:00:00.000Z"
+  },
+  {
+    "id": "seed-9",
+    "name": "ramshtein",
+    "price": 45,
+    "count": 2,
+    "image": "/styles/images/Rammstein_Made_In_Germany_CD.webp",
+    "type": [
+      "CD"
+    ],
+    "description": "Made in Germany CD, great condition.",
+    "seller": "HolyTuna Store",
+    "createdAt": "2026-05-09T00:00:00.000Z"
+  },
+  {
+    "id": "seed-11",
+    "name": "jeff buckley - grace",
+    "price": 67,
+    "count": 2,
+    "image": "/styles/images/JeffBuckley_Grace_CD.webp",
+    "type": [
+      "Vinyl",
+      "name"
+    ],
+    "description": "Grace CD, a must-have for any collection.",
+    "seller": "HolyTuna Store",
+    "createdAt": "2026-05-11T00:00:00.000Z"
+  },
+  {
+    "id": "mralb5tsc49kr",
+    "createdAt": "2026-07-07T11:53:07.648Z",
+    "name": "fg",
+    "price": 454,
+    "count": 1,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFYn6p9PDG2Tm9WxCWvNuxnFTtbr46Ndjq5VlWViucSw&s=10",
+    "type": [
+      "sfd"
+    ],
+    "description": "fdsgf",
+    "seller": "lipo2"
+  },
+  {
+    "id": "mralbgbzxj4c4",
+    "createdAt": "2026-07-07T11:53:21.263Z",
+    "name": "vb",
+    "price": 57,
+    "count": 1,
+    "image": "/styles/images/Notebook.jfif",
+    "type": [
+      "gf"
+    ],
+    "description": "g",
+    "seller": "lipo2"
+  }
+]

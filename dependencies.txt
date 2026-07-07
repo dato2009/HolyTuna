@@ -1,0 +1,8 @@
+express
+ejs
+express-session
+bcryptjs
+compression 
+nodemon
+mongoose dotenv ====
+mongodb

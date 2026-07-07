@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Wonderwall",
+        "artist": "Oasis",
+        "difficulty": "Easy",
+        "capo": "2",
+        "chords": ["Em7", "G", "Dsus4", "A7sus4"],
+        "lyrics": "[Em7] Today is gonna be the day\nThat they're [G] gonna throw it back to you"
+    },
+
+    {
+        "title": "Smells Like Teen Spirit",
+        "artist": "Nirvana",
+        "difficulty": "Medium",
+        "capo": "None",
+        "chords": ["F5", "Bb5", "Ab5", "Db5"],
+        "lyrics": "[F5] Load up on guns\nBring your [Bb5] friends"
+    },
+
+    {
+        "title": "Nothing Else Matters",
+        "artist": "Metallica",
+        "difficulty": "Hard",
+        "capo": "None",
+        "chords": ["Em", "D", "C", "G"],
+        "lyrics": "[Em] So close no matter [D] how far"
+    }
+]

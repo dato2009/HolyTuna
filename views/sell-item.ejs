@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell an Item - HolyTuna Marketplace</title>
+    <link rel="stylesheet" href="/styles/shop.css">
+    <link rel="stylesheet" href="/styles/site.css">
+</head>
+<body>
+
+<%- include('partials/header') %>
+
+<main class="content-page">
+    <div class="page-header">
+        <h1>List an Item</h1>
+        <p>Sell your gear directly to other musicians on HolyTuna.</p>
+        <a href="/shop" class="back-link">&larr; Back to the Shop</a>
+    </div>
+
+    <div class="form-card">
+        <h2>Item Details</h2>
+
+        <% if (error) { %>
+            <div class="form-error"><%= error %></div>
+        <% } %>
+
+        <form action="/shop/sell" method="POST">
+            <div class="form-group">
+                <label for="name">Item Name</label>
+                <input type="text" id="name" name="name" required autofocus
+                       value="<%= old.name || '' %>" placeholder="e.g. Fender Stratocaster">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="price">Price (USD)</label>
+                    <input type="number" id="price" name="price" min="0" step="0.01" required
+                           value="<%= old.price || '' %>" placeholder="299.99">
+                </div>
+                <div class="form-group">
+                    <label for="count">Quantity Available</label>
+                    <input type="number" id="count" name="count" min="1" step="1"
+                           value="<%= old.count || 1 %>">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Categories</label>
+                <input type="text" id="category" name="category"
+                       value="<%= old.category || '' %>" placeholder="guitar, accessories (comma separated)">
+                <p class="form-hint">Used for the shop's filter buttons.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Image URL</label>
+                <input type="url" id="image" name="image"
+                       value="<%= old.image || '' %>" placeholder="https://...">
+                <p class="form-hint">Leave blank to use a placeholder image.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Condition, details, why it's great..."><%= old.description || '' %></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">List Item</button>
+        </form>
+    </div>
+</main>
+
+
+<%- include('partials/footer') %>
+</body>
+</html>

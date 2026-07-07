@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1783425108730",
+    "username": "lipo",
+    "passwordHash": "$2a$10$OkLekhzPyb.PkhbksKTrXeNrbyCEIzLmyM54ckJT6/IVvurzc5vz2",
+    "createdAt": "2026-07-07T11:51:48.730Z"
+  },
+  {
+    "id": "1783425155872",
+    "username": "lipo2",
+    "passwordHash": "$2a$10$pUBCm273rXuZ4CDx9kCepO8OFEM2eSMSMZr54GopziBaRGlwtotNS",
+    "createdAt": "2026-07-07T11:52:35.872Z"
+  }
+]

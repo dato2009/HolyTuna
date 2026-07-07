@@ -1,0 +1,81 @@
+<header class="main-header">
+    <div class="logo"><a href="/" style="text-decoration: none; color: inherit;">HolyTuna</a></div>
+    <nav class="navbar">
+        <div class="dropdown">
+            <button onclick="toggleDropdown('myDropdown1')" class="dropbtn">Tuner ▾</button>
+            <div id="myDropdown1" class="dropdown-content">
+                <a href="/tuner">Electric Guitar</a>
+                <a href="/tuner">Acoustic Guitar</a>
+                <a href="/tuner">Bass Guitar</a>
+                <a href="/tuner">Ukulele</a>
+                <a href="/tuner">Fanduri</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button onclick="toggleDropdown('myDropdown2')" class="dropbtn">Chords ▾</button>
+            <div id="myDropdown2" class="dropdown-content">
+                <div class="dropdown-header">Songs</div>
+                <a href="/chords">Electric Guitar</a>
+                <a href="/chords">Acoustic Guitar</a>
+                <a href="/chords">Bass Guitar</a>
+                <a href="/chords">Ukulele</a>
+                <a href="/chords">Fanduri</a>
+                <div class="dropdown-header">Chords</div>
+                <a href="/chords">Guitar</a>
+                <a href="/chords">Bass Guitar</a>
+                <a href="/chords">Ukulele</a>
+                <a href="/chords">Fanduri</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button onclick="toggleDropdown('myDropdown3')" class="dropbtn">Social ▾</button>
+            <div id="myDropdown3" class="dropdown-content">
+                <a href="/music">Music</a>
+                <a href="/videos">Videos</a>
+                <a href="/chat">Chat</a>
+            </div>
+        </div>
+
+        <a href="/shop" class="nav-link">Shop</a>
+        <a href="/blogs" class="nav-link">Blogs</a>
+
+        <% if (user) { %>
+            <a href="/account" class="User-cabinet">Hi, <%= user.username %></a>
+            <form action="/logout" method="POST" style="display:inline; margin:0;">
+                <button type="submit" class="User-cabinet">Logout</button>
+            </form>
+        <% } else { %>
+            <a href="/login" class="User-cabinet">Login</a>
+            <a href="/register" class="User-cabinet">Sign Up</a>
+        <% } %>
+    </nav>
+</header>
+
+<script>
+   
+    function toggleDropdown(id) {
+        var target = document.getElementById(id);
+        var dropdowns = document.getElementsByClassName('dropdown-content');
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown !== target && openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+        target.classList.toggle('show');
+    }
+    function dropdown(id) { toggleDropdown(id); }
+
+    window.addEventListener('click', function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName('dropdown-content');
+            for (var i = 0; i < dropdowns.length; i++) {
+                if (dropdowns[i].classList.contains('show')) {
+                    dropdowns[i].classList.remove('show');
+                }
+            }
+        }
+    });
+</script>

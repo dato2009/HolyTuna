@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Tuna - The Ultimate Musician Hub</title>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+
+  <header class="main-header">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">HolyTuna</a></div>
+    <nav class="navbar">
+          <button class="User-cabinet"><a href="#">Cabinet</a></button>
+
+      <div class="dropdown">
+        <button onclick="toggleDropdown('myDropdown1')" class="dropbtn">Tuner ▾</button>
+        <div id="myDropdown1" class="dropdown-content">
+          <a href="/pages/tuner/tuner.html">Electric Guitar</a>
+          <a href="/pages/tuner/tuner.html">Acoustic Guitar</a>
+          <a href="/pages/tuner/tuner.html">Bass Guitar</a>
+          <a href="/pages/tuner/tuner.html">Ukulele</a>
+          <a href="/pages/tuner/tuner.html">Fanduri</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button onclick="toggleDropdown('myDropdown2')" class="dropbtn">Chords ▾</button>
+        <div id="myDropdown2" class="dropdown-content">
+          <div class="dropdown-header">Songs</div>
+          <a href="#">Electric Guitar</a>
+          <a href="#">Acoustic Guitar</a>
+          <a href="#">Bass Guitar</a>
+          <a href="#">Ukulele</a>
+          <a href="#">Fanduri</a>
+          <div class="dropdown-header">Chords</div>
+          <a href="#">Guitar</a>
+          <a href="#">Bass Guitar</a>
+          <a href="#">Ukulele</a>
+          <a href="#">Fanduri</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button onclick="toggleDropdown('myDropdown3')" class="dropbtn">Social ▾</button>
+        <div id="myDropdown3" class="dropdown-content">
+          <a href="/pages/post-your-content/music.html">Music</a>
+          <a href="/pages/post-your-content/videos.html">Videos</a>
+        </div>
+      </div>
+
+      <a href="/pages/post-your-content/shop.html" class="nav-link">Shop</a>
+      <a href="/pages/post-your-content/blogs.html" class="nav-link">Blogs</a>
+    </nav>
+  </header>
+
+  <section class="Hero-section">
+    <div class="hero-overlay"></div>
+    <div class="waw">
+      <div class="video-container">
+        <video width="100%" height="auto" controls>
+          <source src="/styles/videos/rap-battle---monika-vs-benjamin-netanyahu.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="hero-text-side">
+        <h1>Your story starts here</h1>
+        <p class="hero-subtitle">The ultimate competitive tuner, chord library, and social marketplace for musicians.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="carousel-container">
+    <div class="carousel">
+      <div class="carousel__track">
+        <div class="carousel__slide">
+          <div class="textbx" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/styles/images/360_F_1687528008_b3UEvXStsFivolLMOSeuTrPM3QC6y6Qm.jpg');">
+            <h3>What are we?</h3>
+            <p>HolyTuna is an advanced cross-platform suite designed to outperform legacy tuners with real-time spectrum frequency analysis.</p>
+          </div>
+        </div>
+        <div class="carousel__slide">
+          <div class="textbx" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/styles/images/the-guitar-store.jpg');">
+            <h3>What we offer</h3>
+            <p>Access flawless precision tuners, interactive smart transposing chord charts, and global backing tracks right in your browser.</p>
+          </div>
+        </div>
+        <div class="carousel__slide">
+          <div class="textbx" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/styles/images/photo-1605020420620-20c943cc4669.avif');">
+            <h3>Why choose us?</h3>
+            <p>Built by musicians, for musicians. Experience zero delay performance tracking alongside an open marketplace to monetize your craft.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel__btn carousel__btn--prev"><</button>
+      <button class="carousel__btn carousel__btn--next">></button>
+      <div class="carousel__nav"></div>
+    </div>
+  </section>
+
+  <section class="Main-Menu-Box">
+    <a href="/pages/tuner/tuner.html" style="text-decoration: none; color: inherit;">  <div class="hub-card Tuner-Box">
+      <div class="card-icon">🎸</div>
+      <h2>Precision Tuner</h2>
+      <p>A surgical engine matching your highest performance standards. Supports custom, drop, and alternative structural temperaments.</p>
+    </div></a>
+  <a href="/pages/chords/chords.html" style="text-decoration: none; color: inherit;">
+   <div class="hub-card Chords-Box">
+      <div class="card-icon">🎼</div>
+      <h2>Smart Chords</h2>
+      <p>Interactive engine optimized for seamless fret placement progression maps. Explore tabs across multiple acoustic variations.</p>
+    </div>
+  </a>
+
+  <a href="/pages/post-your-content/music.html" style="text-decoration: none; color: inherit;" >
+   <div class="hub-card Content-Box">
+      <div class="card-icon">🌐</div>
+      <h2>Creator Studio</h2>
+      <p>Publish your high-fidelity audio tracks, showcase video gear playthroughs, share custom blogs, and sell vintage marketplace instruments.</p>
+    </div>
+  </a>
+  </section>
+
+  <section class="Section-Wrapper">
+    <h2 class="section-title">Featured Gear From Shop</h2>
+    <div class="Featured-shop-items">
+      </div>
+  </section>
+
+  <section class="Section-Wrapper">
+    <h2 class="section-title">Newest Insights & Blogs</h2>
+    <div class="Featured-Blogs">
+      </div>
+  </section>
+
+  <script src="/scripts/index.js"></script>
+</body>
+</html>

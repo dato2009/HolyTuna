@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolyTuna Studio - Articles & Insights</title>
+    <link rel="stylesheet" href="/styles/blogs.css">
+    <link rel="stylesheet" href="/styles/site.css">
+</head>
+<body>
+
+ <%- include('partials/header') %>
+
+    <main class="blog-container">
+        <header class="blog-hero">
+            <h1 class="page-title">Studio Logs</h1>
+            <p class="page-subtitle">Production workflows, gear analysis, and musical insights from the team.</p>
+            <a href="/" class="back-home-link">← Return to Headquarters</a>
+        </header>
+
+        <section class="blog-feed">
+            <% posts.forEach(function(post) { %>
+                <div class="users">
+                    <h1><%= post.title %></h1>
+                    <p><%= post.body %></p>
+                    <p class="post-time">
+                        <%= post.author %> &middot; <%= new Date(post.createdAt).toLocaleString() %>
+                    </p>
+                </div>
+            <% }); %>
+        </section>
+    </main>
+
+
+<%- include('partials/footer') %>
+</body>
+</html>

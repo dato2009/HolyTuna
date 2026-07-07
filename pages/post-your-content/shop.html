@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolyTuna Marketplace - Pro Music Gear</title>
+    <link rel="stylesheet" href="/styles/shop.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo"><a href="/index.html" style="text-decoration: none; color: inherit;">HolyTuna</a></div>
+        <nav class="navbar">
+                <button class="User-cabinet"><a href="#">Cabinet</a></button>
+
+            <div class="dropdown">
+                <button onclick="dropdown('myDropdown1')" class="dropbtn">Tuner ▾</button>
+                <div id="myDropdown1" class="dropdown-content">
+                    <a href="/pages/tuner/tuner.html">Electric Guitar</a>
+                    <a href="/pages/tuner/tuner.html">Acoustic Guitar</a>
+                    <a href="/pages/tuner/tuner.html">Bass Guitar</a>
+                    <a href="/pages/tuner/tuner.html">Ukulele</a>
+                    <a href="/pages/tuner/tuner.html">Fanduri</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="dropdown('myDropdown2')" class="dropbtn">Chords ▾</button>
+                <div id="myDropdown2" class="dropdown-content">
+                    <a href="#">Electric Guitar</a>
+                    <a href="#">Acoustic Guitar</a>
+                    <a href="#">Bass Guitar</a>
+                    <a href="#">Ukulele</a>
+                    <a href="#">Fanduri</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="dropdown('myDropdown3')" class="dropbtn">Social ▾</button>
+                <div id="myDropdown3" class="dropdown-content">
+                    <a href="/pages/post-your-content/music.html">Music</a>
+                    <a href="/pages/post-your-content/videos.html">Videos</a>
+                </div>
+            </div>
+
+            <a href="/pages/index.html" class="nav-link">Home</a>
+            <a href="/pages/post-your-content/blogs.html" class="nav-link">Blogs</a>
+        </nav>
+    </header>
+
+    <main class="shop-container">
+        <aside class="Filters"></aside>
+
+        <section class="products-wrapper">
+            <div class="search-wrapper">
+                <input type="text" id="shop-search" placeholder="Search gear, pedals, instruments...">
+            </div>
+
+            <h2 class="catalog-title">Available Gear</h2>
+            <div class="products"></div>
+        </section>
+
+        <aside class="cart-container-box">
+            <h2>Your Cart</h2>
+            <div class="cart"></div>
+            <div class="cart-footer">
+                <button class="Check-out-btn">Proceed to Checkout</button>
+            </div>
+        </aside>
+    </main>
+
+    <div class="Buy_Panel" id="buyPanel">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        
+        <div class="Product_image">
+            <img id="popupImage" src="" alt="Product Image">
+        </div>
+        
+        <div class="Product_details">
+            <div class="Product_name">
+                <h4 id="popupName">Product Name</h4>
+            </div>
+            <div class="Product_price"> 
+                <h4 id="popupPrice">$0</h4>
+            </div>
+            <button class="add-to-cart" id="popupAddToCart">
+                <h4>ADD TO CART</h4>
+            </button>
+        </div>
+    </div>
+
+    <script src="/scripts/shop.js"></script>
+</body>
+</html>

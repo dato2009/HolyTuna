@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolyTuna - Pro Guitar Tuner</title>
+    <link rel="stylesheet" href="tuner.css">
+</head>
+<body>
+
+<header class="main-header">
+        <div class="logo"><a href="/index.html" style="text-decoration: none; color: inherit;">HolyTuna</a></div>
+    <nav class="navbar">
+          <button class="User-cabinet"><a href="#">Cabinet</a></button>
+
+      <div class="dropdown">
+        <button onclick="toggleDropdown('myDropdown1')" class="dropbtn">Tuner ▾</button>
+        <div id="myDropdown1" class="dropdown-content">
+          <a href="/pages/tuner/tuner.html">Electric Guitar</a>
+          <a href="/pages/tuner/tuner.html">Acoustic Guitar</a>
+          <a href="/pages/tuner/tuner.html">Bass Guitar</a>
+          <a href="/pages/tuner/tuner.html">Ukulele</a>
+          <a href="/pages/tuner/tuner.html">Fanduri</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button onclick="toggleDropdown('myDropdown2')" class="dropbtn">Chords ▾</button>
+        <div id="myDropdown2" class="dropdown-content">
+          <div class="dropdown-header">Songs</div>
+          <a href="#">Electric Guitar</a>
+          <a href="#">Acoustic Guitar</a>
+          <a href="#">Bass Guitar</a>
+          <a href="#">Ukulele</a>
+          <a href="#">Fanduri</a>
+          <div class="dropdown-header">Chords</div>
+          <a href="#">Guitar</a>
+          <a href="#">Bass Guitar</a>
+          <a href="#">Ukulele</a>
+          <a href="#">Fanduri</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button onclick="toggleDropdown('myDropdown3')" class="dropbtn">Social ▾</button>
+        <div id="myDropdown3" class="dropdown-content">
+          <a href="/pages/post-your-content/music.html">Music</a>
+          <a href="/pages/post-your-content/videos.html">Videos</a>
+        </div>
+      </div>
+
+      <a href="/pages/post-your-content/shop.html" class="nav-link">Shop</a>
+      <a href="/pages/post-your-content/blogs.html" class="nav-link">Blogs</a>
+    </nav>
+  </header>
+
+    <main class="tuner-container">
+        <div class="tuner-card">
+            <p class="tuner-subtitle">Instrument Pitch Detector</p>
+            <h1 id="note">--</h1>
+            <p id="freq">0.00 Hz</p>
+
+            <div class="meter-wrapper">
+                <div class="meter">
+                    <div class="center-notch"></div>
+                    <div class="needle" id="needle"></div>
+                </div>
+                <div class="labels">
+                    <span class="label-flat">Flat</span>
+                    <span class="label-match">In Tune</span>
+                    <span class="label-sharp">Sharp</span>
+                </div>
+            </div>
+
+            <button id="startTunerBtn" class="action-btn">
+                <h4>ENABLE MICROPHONE</h4>
+            </button>
+        </div>
+    </main>
+
+    <script src="tuner.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolyTuna - Pro Guitar Tuner</title>
+    <link rel="stylesheet" href="/tuner.css">
+    <link rel="stylesheet" href="/styles/site.css">
+</head>
+<body>
+
+<%- include('partials/header') %>
+
+    <main class="tuner-container">
+        <div class="tuner-card">
+            <p class="tuner-subtitle">Instrument Pitch Detector</p>
+            <h1 id="note">--</h1>
+            <p id="freq">0.00 Hz</p>
+
+            <div class="meter-wrapper">
+                <div class="meter">
+                    <div class="center-notch"></div>
+                    <div class="needle" id="needle"></div>
+                </div>
+                <div class="labels">
+                    <span class="label-flat">Flat</span>
+                    <span class="label-match">In Tune</span>
+                    <span class="label-sharp">Sharp</span>
+                </div>
+            </div>
+
+            <button id="startTunerBtn" class="action-btn">
+                <h4>ENABLE MICROPHONE</h4>
+            </button>
+        </div>
+
+        <aside class="tunings-reference-card">
+            <h3>Common Tunings</h3>
+            <ul class="tunings-list">
+                <li>
+                    <span class="tuning-name">Standard</span>
+                    <span class="tuning-notes">E A D G B E</span>
+                </li>
+                <li>
+                    <span class="tuning-name">Drop D</span>
+                    <span class="tuning-notes">D A D G B E</span>
+                </li>
+                <li>
+                    <span class="tuning-name">Drop C</span>
+                    <span class="tuning-notes">C G C F A D</span>
+                </li>
+                <li>
+                    <span class="tuning-name">Open G</span>
+                    <span class="tuning-notes">D G D G B D</span>
+                </li>
+                <li>
+                    <span class="tuning-name">Open D</span>
+                    <span class="tuning-notes">D A D F# A D</span>
+                </li>
+                <li>
+                    <span class="tuning-name">DADGAD</span>
+                    <span class="tuning-notes">D A D G A D</span>
+                </li>
+                <li>
+                    <span class="tuning-name">Half-Step Down</span>
+                    <span class="tuning-notes">Eb Ab Db Gb Bb Eb</span>
+                </li>
+            </ul>
+            <p class="tunings-hint">Tune each string to the note shown, low to high.</p>
+        </aside>
+    </main>
+
+    <script src="/tuner.js"></script>
+
+<%- include('partials/footer') %>
+</body>
+</html>

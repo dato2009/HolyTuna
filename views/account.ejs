@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= profile.username %>'s Cabinet - HolyTuna</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/site.css">
+</head>
+<body>
+
+<%- include('partials/header') %>
+
+<main class="content-page">
+    <div class="page-header">
+        <h1>Your Cabinet</h1>
+        <a href="/" class="back-link">&larr; Return to Headquarters</a>
+    </div>
+
+    <div class="form-card" style="max-width: 600px;">
+        <h2>Profile</h2>
+        <p><strong>Username:</strong> <%= profile.username %></p>
+        <% if (profile.joinedAt) { %>
+            <p><strong>Member since:</strong> <%= new Date(profile.joinedAt).toLocaleDateString() %></p>
+        <% } %>
+    </div>
+
+    <hr class="section-divider">
+    <h2 class="page-header" style="margin-bottom:1.5rem;">Favorited Gear</h2>
+    <% if (!favoritedItems || favoritedItems.length === 0) { %>
+        <div class="empty-state">You haven't favorited any gear yet. <a href="/shop" style="color: var(--primary);">Browse the shop</a>.</div>
+    <% } else { %>
+        <div class="listing-grid">
+            <% favoritedItems.forEach(function(item) { %>
+                <div class="listing-card">
+                    <h3><%= item.name %></h3>
+                    <p>$<%= item.price %></p>
+                    <p class="seller-tag">Sold by <strong><%= item.seller %></strong></p>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+
+    <hr class="section-divider">
+    <h2 class="page-header" style="margin-bottom:1.5rem;">Your Shop Listings</h2>
+    <% if (!myProducts || myProducts.length === 0) { %>
+        <div class="empty-state">You haven't listed anything for sale yet. <a href="/shop/sell" style="color: var(--primary);">List an item</a>.</div>
+    <% } else { %>
+        <div class="listing-grid">
+            <% myProducts.forEach(function(item) { %>
+                <div class="listing-card">
+                    <h3><%= item.name %></h3>
+                    <p>$<%= item.price %> &middot; Qty <%= item.count %></p>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+
+    <hr class="section-divider">
+    <h2 class="page-header" style="margin-bottom:1.5rem;">Your Blog Posts</h2>
+    <% if (!myBlogPosts || myBlogPosts.length === 0) { %>
+        <div class="empty-state">No blog posts yet.</div>
+    <% } else { %>
+        <div class="listing-grid">
+            <% myBlogPosts.forEach(function(post) { %>
+                <div class="listing-card">
+                    <h3><%= post.title %></h3>
+                    <p><%= post.body %></p>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+
+    <hr class="section-divider">
+    <h2 class="page-header" style="margin-bottom:1.5rem;">Your Tracks</h2>
+    <% if (!myTracks || myTracks.length === 0) { %>
+        <div class="empty-state">No tracks posted yet. <a href="/music" style="color: var(--primary);">Post one</a>.</div>
+    <% } else { %>
+        <div class="listing-grid">
+            <% myTracks.forEach(function(track) { %>
+                <div class="listing-card">
+                    <h3><%= track.title %></h3>
+                    <span class="badge"><%= track.genre %></span>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+
+    <hr class="section-divider">
+    <h2 class="page-header" style="margin-bottom:1.5rem;">Your Videos</h2>
+    <% if (!myVideos || myVideos.length === 0) { %>
+        <div class="empty-state">No videos posted yet. <a href="/videos" style="color: var(--primary);">Post one</a>.</div>
+    <% } else { %>
+        <div class="listing-grid">
+            <% myVideos.forEach(function(video) { %>
+                <div class="listing-card">
+                    <h3><%= video.title %></h3>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+</main>
+
+
+<%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-deep: #121614;
+  --bg-surface: #1a201c;
+  --bg-surface-hover: #222a25;
+  --primary: #ffb703;
+  --primary-hover: #fb8500;
+  --text-main: #f8f9fa;
+  --text-muted: #adb5bd;
+  --border-color: #2c3530;
+  --accent-green: #2a9d8f;
+  --accent-red: #e76f51;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  padding-top: 70px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Main Navigation Header --- */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(18, 22, 20, 0.9);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--primary);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+.nav-link:hover { color: var(--primary); }
+
+.dropdown { position: relative; }
+.dropbtn {
+  background: none;
+  color: var(--text-main);
+  border: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 0.2rem;
+  transition: color 0.2s;
+}
+.dropbtn:hover { color: var(--primary); }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: var(--bg-surface);
+  min-width: 200px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  overflow: hidden;
+  z-index: 1001;
+}
+.dropdown-content.show { display: block; }
+
+.dropdown-header {
+  background: rgba(255,255,255,0.03);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown-content a {
+  color: var(--text-muted);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.dropdown-content a:hover {
+  background-color: var(--border-color);
+  color: var(--text-main);
+}
+
+.User-cabinet {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.User-cabinet a {
+  color: #121614;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.User-cabinet:hover { background-color: var(--primary-hover); }
+
+/* --- Tuner Dashboard View --- */
+.tuner-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #151a17;
+}
+
+.tuner-card {
+  width: 100%;
+  max-width: 550px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.tuner-subtitle {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+#note {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 96px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  transition: color 0.15s ease;
+}
+
+/* In-tune green glow effect class toggled via JS */
+#note.in-tune {
+  color: var(--accent-green);
+  text-shadow: 0 0 20px rgba(42, 157, 143, 0.4);
+}
+
+#freq {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+/* --- Tuning Meter Visuals --- */
+.meter-wrapper {
+  margin-bottom: 3rem;
+}
+
+.meter {
+  width: 100%;
+  height: 8px;
+  background-color: var(--bg-deep);
+  border: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+  position: relative;
+  border-radius: 4px;
+}
+
+.center-notch {
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  width: 2px;
+  height: 14px;
+  background-color: var(--border-color);
+  transform: translateX(-50%);
+}
+
+.needle {
+  width: 4px;
+  height: 24px;
+  background-color: var(--accent-red);
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  transition: left 0.1s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s;
+}
+
+/* Color modifications for the needle state */
+.needle.in-tune {
+  background-color: var(--accent-green);
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.label-flat { text-align: left; width: 33.33%; }
+.label-match { text-align: center; width: 33.33%; color: var(--text-muted); transition: color 0.2s; }
+.label-sharp { text-align: right; width: 33.33%; }
+
+.label-match.active {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+/* --- Control Buttons --- */
+.action-btn {
+  width: 100%;
+  padding: 16px 0;
+  border: 2px var(--primary) solid;
+  background-color: var(--primary);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s, transform 0.1s;
+}
+
+.action-btn h4 {
+  color: #121614;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.action-btn:hover {
+  background-color: transparent;
+}
+.action-btn:hover h4 {
+  color: var(--primary);
+}
+.action-btn:active {
+  transform: scale(0.98);
+}
+
+.action-btn.running {
+  border-color: var(--border-color);
+  background-color: transparent;
+  cursor: default;
+  pointer-events: none;
+}
+.action-btn.running h4 {
+  color: var(--text-muted);
+} 

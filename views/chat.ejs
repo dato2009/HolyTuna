@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Chat - HolyTuna</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/site.css">
+</head>
+<body>
+
+<%- include('partials/header') %>
+
+<main class="content-page">
+    <div class="page-header">
+        <h1>Community Chat</h1>
+        <p>Say hi, ask a question, or just talk shop with other musicians.</p>
+        <a href="/" class="back-link">&larr; Return to Headquarters</a>
+    </div>
+
+    <div class="chat-box">
+        <div class="chat-messages">
+            <% if (!messages || messages.length === 0) { %>
+                <div class="empty-state">No messages yet. Start the conversation!</div>
+            <% } else { %>
+                <% messages.forEach(function(msg) { %>
+                    <div class="chat-message <%= msg.username === user.username ? 'chat-message-own' : '' %>">
+                        <div class="chat-message-meta">
+                            <strong><%= msg.username %></strong>
+                            <span><%= new Date(msg.createdAt).toLocaleString() %></span>
+                        </div>
+                        <p><%= msg.message %></p>
+                    </div>
+                <% }); %>
+            <% } %>
+        </div>
+
+        <% if (error) { %>
+            <div class="form-error"><%= error %></div>
+        <% } %>
+
+        <form action="/chat" method="POST" class="chat-form">
+            <input type="text" name="message" placeholder="Type a message..." required autofocus autocomplete="off">
+            <button type="submit" class="btn btn-primary" style="width:auto;">Send</button>
+        </form>
+    </div>
+</main>
+
+
+<%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,28 @@
+[
+    {
+        "headline":"added new blog place",
+        "text":"today we introduce new place, where we will post all updates about our website",
+        "timeofpost":"5/11/2026 15:45"
+    },
+    {
+        "headline":"added new time section",
+        "text":"now we show when exactly was the post posted under the text instead of in the headline ",
+        "timeofpost":"5/11/2026 15:52"
+    },
+    {
+        "headline":"added new Featured shop items section",
+        "text":"now we show hot deals on the front page ",
+        "timeofpost":"5/13/2026 14:20"
+    },
+    {
+        "headline":"added new Featured Blogs section",
+        "text":"now we show New blogs on the front page ",
+        "timeofpost":"5/13/2026 14:43"
+    },
+    {
+        "headline":"Revamped Site!",
+        "text":"we revamped whole site, changed design,made usage comfortable for average users and made it look better",
+        "timeofpost":"03/06/2026 15:51"
+    }
+
+]
